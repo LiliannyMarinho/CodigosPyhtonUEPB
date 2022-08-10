@@ -1,0 +1,32 @@
+#OBS: Colocar teste de projeto no Github
+
+name = input('Nome do usuário: ')
+senha = input('Digite sua senha: ')
+senha == name
+
+while senha != name:
+    print('Senha Incorreta!')
+    print('')
+    print('Insira o nome do usuário e senha novamente: ')
+    print('')
+    name = input('Nome do usuário: ')
+    senha = input('Digite sua senha: ')
+print('Login efetuado com sucesso!')
+print('')
+print('Usuário {}, bem-vindo a sua conta.'.format(name))
+print('')
+print('Insira seus dados corretamente para concluir a criação de sua conta.')
+print('')
+print('Informe as informações de nascimento em formato numérico!')
+print('')
+print('Data de nascimento')
+print('')
+dia = int(input('Dia: '))
+mes = int(input('Mês: '))
+ano = int(input('Ano: '))
+print('')
+print('Informações Principais')
+print('')
+print('Usuário: {}'.format(name))
+print('Data de nascimento: {}/{}/{}'.format(dia,mes,ano))
+print('')
