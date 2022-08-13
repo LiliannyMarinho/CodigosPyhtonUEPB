@@ -1,5 +1,8 @@
 #OBS: Colocar teste de projeto no Github
 
+from re import M
+
+
 name = input('Nome do usuário: ')
 senha = input('Digite sua senha: ')
 senha == name
@@ -17,7 +20,7 @@ print('Usuário {}, bem-vindo a sua conta.'.format(name))
 print('')
 print('Insira seus dados corretamente para concluir a criação de sua conta.')
 print('')
-print('Informe as informações de nascimento em formato numérico!')
+print('As informações de nascimento devem ser inseridas em formato numérico!')
 print('')
 print('='*22)
 print('  Data de nascimento')
@@ -28,8 +31,24 @@ mes = int(input('Mês: '))
 ano = int(input('Ano: '))
 print('')
 print('='*22)
+print('     Sexualidade')
+print('='*22)
+print('')
+print('Sexo: \n(F) - Feminino \n(M) - Masculino \n(O) - Outro')
+print('')
+sexualidade = str(input('Informe: '))
+print('')
+if sexualidade == 'F':
+    sexualidade = 'Feminino'
+elif sexualidade == 'M':
+    sexualidade = 'Masculino'
+elif sexualidade == 'O':
+    sexualidade = 'Outro'
+print('')
+print('')
+print('='*22)
 print('Informações Principais')
 print('='*22)
 print('')
-print('Usuário: {} \nData de nascimento: {}/{}/{}'.format(name,dia,mes,ano))
+print('Usuário: {} \nData de nascimento: {}/{}/{} \nSexualidade: {}'.format(name,dia,mes,ano,sexualidade))
 print('')
