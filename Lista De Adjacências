@@ -1,0 +1,35 @@
+print("Qual tipo do Grafo:")
+tipo = input("[1] - Grafo Direcionado\n[2] - Grafo Não Direcionado\n\n-> ")
+
+vertices = int(input("Informe a quantidade de vertices do grafo: "))
+
+if(tipo == "1"):
+    tipo = "Grafo Direcionado"
+
+matrizGrafo = []
+
+print("\nInforme o número de arestas: ")
+
+for i in range(vertices):
+    linha = []
+    for j in range(vertices):
+        if(tipo == "Grafo Direcionado"):
+            print("Ligação de Aresta", i, "->", j, ": ")
+        else:
+            print("Ligação de Aresta", i, "--", j, ": ")
+        
+        n = int(input())
+    	
+        linha.append(n)
+    matrizGrafo.append(linha)
+    
+
+print("\nRepresentação - Lista De Adjacências.\n")
+    
+for i in range(vertices):
+    print("|", i, "| ->", end=" ")
+    for j in range(vertices):
+        if matrizGrafo[i][j] != 0:
+            print("|", j, end=" ")
+        
+    print("|\n")
